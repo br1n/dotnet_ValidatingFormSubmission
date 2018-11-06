@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Please Register</h1>
+    <hr>
+    @model User
+    <div asp-validation-summary="All"></div>
+    <form action="/create" method="post">
+        <div class="form-group">
+            <label for="FirstName">First Name:</label>
+            <input type="text" name="FirstName">
+        </div>
+        <div class="form-group">
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="LastName">
+        </div>
+        <div class="form-group">
+            <label for="Age">Age:</label>
+            <input type="text" name="Age">
+        </div>
+        <div class="form-group">
+            <label for="Email">Email:</label>
+            <input type="text" name="Email">
+        </div>
+        <div class="form-group">
+            <label for="Password">Password:</label>
+            <input type="text" name="Password">
+        </div>
+        <div class="form-group">
+            <label for="ConfirmPassword">Confirm Password:</label>
+            <input type="text" name="ConfirmPassword">
+        </div>
+        <input type="submit" value="Submit!">
+    </form>
+</body>
+</html>
